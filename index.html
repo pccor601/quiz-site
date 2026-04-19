@@ -9,7 +9,7 @@
 body {
   font-family: sans-serif;
   max-width: 900px;
-  margin: auto;
+  margin: 10px;
 }
 
 h2 {
@@ -37,6 +37,8 @@ li {
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start
 }
 
 .folder {
@@ -47,7 +49,21 @@ li {
 .file-actions a {
   margin-left: 10px;
   font-size: 0.9em;
+  margin-top: 5px;
 }
+
+@media (max-width: 600px) {
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-actions a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
 </style>
 </head>
 
