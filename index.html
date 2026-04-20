@@ -15,6 +15,7 @@ body {
 h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 #path {
@@ -26,19 +27,23 @@ h2 {
 button {
   margin-bottom: 10px;
 }
-
 ul {
   list-style: none;
   padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+
 li {
-  padding: 6px;
-  border-bottom: 1px solid #eee;
   display: flex;
+  flex-direction: row;            /* ← important */
   justify-content: space-between;
-  flex-direction: column;
-  align-items: flex-start
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 .folder {
@@ -55,15 +60,14 @@ li {
 @media (max-width: 600px) {
   li {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
-  .file-actions a {
-    margin-left: 0;
-    margin-right: 10px;
+  .file-actions {
+    margin-top: 5px;
   }
 }
-
 </style>
 </head>
 
@@ -71,7 +75,8 @@ li {
 
 <h2>Documents</h2>
 <div id="path"></div>
-<button onclick="goBack()">⬅ Back</button>
+
+<h2><button onclick="goBack()">⬅ Back</button></h2>
 
 <ul id="fileList">Loading...</ul>
 
