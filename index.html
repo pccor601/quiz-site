@@ -56,18 +56,25 @@ li {
   font-size: 0.9em;
   margin-top: 5px;
 }
-
 @media (max-width: 600px) {
   li {
-    flex-direction: column;
+    flex-direction: row;          /* keep same line */
     align-items: center;
-    text-align: center;
   }
 
-  .file-actions {
-    margin-top: 5px;
+  li span:first-child {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .file-actions a {
+    margin-left: 6px;             /* tighter spacing */
+    font-size: 0.85em;            /* slightly smaller */
   }
 }
+
 </style>
 </head>
 
