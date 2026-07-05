@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pentecost</title>
+<link rel="stylesheet" href="Js-css/style.css">
+<!--<style>
+    body {
+        font-family: Georgia, serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fdfdfd;
+        color: #222;
+    }
+    .highlight {
+      background-color: #ffff99;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-size: 2em;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    h3 {
+        text-aline: center;
+    }
+    pre {
+        white-space: pre-wrap;
+        font-family: Georgia, serif;
+        font-size: 1em;
+    }
+</style></-->
+</head>
+<body>
+<h2>Acts 2:1-12 </h2> Tap <a href="https://learn.ligonier.org/sermons/pentecost">here</a> for the sermon.
+<form id="quizForm">
+<div class="question"><p><strong>Q1. What was the name of the Jewish feast that took place 49 days after the Passover?</strong></p>
+<label><input type="radio" name="q1" value="a"> a) The feast of sacrifices.</label><br>
+<label><input type="radio" name="q1" value="b"> b) The feast of repentance.</label><br>
+<label><input type="radio" name="q1" value="c"> c) The feast of obedience.</label><br>
+<label><input type="radio" name="q1" value="d"> d) The feast of offerings.</label><br>
+<label><input type="radio" name="q1" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q1_correct" value="e">
+</div><hr>
+
+<div class="question"><p><strong>Q2. Where was this feast celebrated?</strong></p>
+<label><input type="radio" name="q2" value="a"> a) Jerusalem</label><br>
+<label><input type="radio" name="q2" value="b"> b) Bethlehem</label><br>
+<label><input type="radio" name="q2" value="c"> c) Nazareth</label><br>
+<label><input type="radio" name="q2" value="d"> d) On Mt. Carmel.</label><br>
+<label><input type="radio" name="q2" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q2_correct" value="a">
+</div><hr>
+
+<div class="question"><p><strong>Q3. What was the visible sign that accompanied the Pentecostal experience?</strong></p>
+<label><input type="radio" name="q3" value="a"> a) Glowing crosses.</label><br>
+<label><input type="radio" name="q3" value="b"> b) Tongues of fire.</label><br>
+<label><input type="radio" name="q3" value="c"> c) Clouds of incense.</label><br>
+<label><input type="radio" name="q3" value="d"> d) A powerful thunderstorm.</label><br>
+<label><input type="radio" name="q3" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q3_correct" value="b">
+</div><hr>
+
+<div class="question"><p><strong>Q4. What is the fuel that feeds the passion of a Christian towards the things of God?</strong></p>
+<label><input type="radio" name="q4" value="a"> a) Christian fellowship, public worship and confession of sin.</label><br>
+<label><input type="radio" name="q4" value="b"> b) Mutual encouragement, faithful service, Godly behaviour.</label><br>
+<label><input type="radio" name="q4" value="c"> c) Tongue speaking, prophecy and miraculous healing.</label><br>
+<label><input type="radio" name="q4" value="d"> d) The word, prayer and sacraments.</label><br>
+<label><input type="radio" name="q4" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q4_correct" value="d">
+</div><hr>
+
+<div class="question"><p><strong>Q5. What relevance does Pentecost have for us today?</strong></p>
+<label><input type="radio" name="q5" value="a"> a) Just as the disciples in the upper room were empowered to speak in tongues, so are we today. </label><br>
+<label><input type="radio" name="q5" value="b"> b) We too are empowered by the Holy Spirit to be Christ’s witnesses to the modern world.
+</label><br>
+<label><input type="radio" name="q5" value="c"> c) If the upper room disciples had to wait for the Holy Spirit, so must we wait for him today. 
+</label><br>
+<label><input type="radio" name="q5" value="d"> d) If we wait for the Holy Spirit with enough passion we too will receive tongues of fire on our heads.</label><br>
+<label><input type="radio" name="q5" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q5_correct" value="b">
+</div><hr>
+
+
+<button type="button" onclick="scoreQuiz()">Score Quiz</button>
+
+<p id="scoreDisplay" style="font-weight:bold; font-size:1.2em;"></p>
+</form>
+
+<script>
+
+/*const sentence1 = document.getElementById("section1");
+const sentence2 = document.getElementById("section2");
+const sentence3 = document.getElementById("section3");
+const sentence4 = document.getElementById("section4");
+const sentence5 = document.getElementById("section5");
+const sentence6 = document.getElementById("section6");
+const sentence7 = document.getElementById("section7");
+const sentence8 = document.getElementById("section8");
+const sentence9 = document.getElementById("section9");
+const sentence10 = document.getElementById("section10"); */
+
+
+/*document.getElementById("button1").addEventListener("click", () => {
+sentence1.classList.add("highlight");
+});
+document.getElementById("button2").addEventListener("click", () => {
+removeHighlight();
+sentence2.classList.add("highlight");
+});
+document.getElementById("button3").addEventListener("click", () => {
+removeHighlight();
+sentence3.classList.add("highlight");
+});
+document.getElementById("button4").addEventListener("click", () => {
+removeHighlight();
+sentence4.classList.add("highlight");
+});
+document.getElementById("button5").addEventListener("click", () => {
+removeHighlight();
+sentence5.classList.add("highlight");
+});
+document.getElementById("button6").addEventListener("click", () => {
+removeHighlight();
+sentence6.classList.add("highlight");
+});
+document.getElementById("button7").addEventListener("click", () => {
+removeHighlight();
+sentence7.classList.add("highlight");
+});
+document.getElementById("button8").addEventListener("click", () => {
+removeHighlight();
+sentence8.classList.add("highlight");
+});
+document.getElementById("button9").addEventListener("click", () => {
+removeHighlight();
+sentence9.classList.add("highlight");
+});
+document.getElementById("button10").addEventListener("click", () => {
+removeHighlight();
+sentence10.classList.add("highlight");
+});*/
+
+
+/*function removeHighlight() {
+   sentence1.classList.remove("highlight");
+   sentence2.classList.remove("highlight");
+   sentence3.classList.remove("highlight");
+   sentence4.classList.remove("highlight");
+   sentence5.classList.remove("highlight");
+   sentence6.classList.remove("highlight");
+   sentence7.classList.remove("highlight");
+   sentence8.classList.remove("highlight");
+   sentence10.classList.remove("highlight");
+}*/
+
+
+function disableButtons() {
+  for (let i = 1; i <= 5; i++) {
+    const btn = document.getElementById(`button${i}`);
+    if (btn) btn.disabled = true;
+  }
+}
+
+function enableButtons() {
+  for (let i = 1; i <= 5; i++) {
+    const btn = document.getElementById(`button${i}`);
+    if (btn) btn.disabled = false;
+  }
+}
+
+disableButtons();
+
+function scoreQuiz() {
+    const form = document.getElementById('quizForm');
+    const qs = form.querySelectorAll('.question');
+    let total = qs.length;
+    let score = 0;
+
+    qs.forEach((div, i) => {
+        const q = i + 1;
+        const correct = form.querySelector(`input[name=q${q}_correct]`).value;
+        const chosen = form.querySelector(`input[name=q${q}]:checked`);
+        const labels = div.querySelectorAll('label');
+
+        labels.forEach(l => {
+            l.style.background = '';
+            l.style.padding = '3px';
+        });
+
+        labels.forEach(l => {
+            const val = l.querySelector('input').value;
+
+            if (val === correct) {
+                l.style.background = 'lightgreen';
+            }
+
+            if (chosen && val === chosen.value && val !== correct) {
+                l.style.background = 'lightcoral';
+            }
+        });
+
+        if (chosen && chosen.value === correct) {
+            score++;
+        }
+    }
+);
+
+document.getElementById('scoreDisplay').textContent =
+        `Score: ${score} / ${total}`;    
+}
+</script>
+
+</body>
+</html>
+
