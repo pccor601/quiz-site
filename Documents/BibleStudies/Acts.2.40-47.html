@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Life in the Early Church</title>
+<link rel="stylesheet" href="Js-css/style.css">
+<!--<style>
+    body {
+        font-family: Georgia, serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fdfdfd;
+        color: #222;
+    }
+    .highlight {
+      background-color: #ffff99;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-size: 2em;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    h3 {
+        text-aline: center;
+    }
+    pre {
+        white-space: pre-wrap;
+        font-family: Georgia, serif;
+        font-size: 1em;
+    }
+</style></-->
+</head>
+<body>
+<h2>Acts 2:40-47 </h2> Tap <a href="https://learn.ligonier.org/sermons/life-early-church">here</a> for the sermon.
+<form id="quizForm">
+<div class="question"><p><strong>Q1. What is wrong with the expression “born again Christian”?</strong></p>
+<label><input type="radio" name="q1" value="a"> a) Nothing</label><br>
+<label><input type="radio" name="q1" value="b"> b) We are only born once.</label><br>
+<label><input type="radio" name="q1" value="c"> c) It is a tautology.</label><br>
+<label><input type="radio" name="q1" value="d"> d) It discriminates between Christians.</label><br>
+<label><input type="radio" name="q1" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q1_correct" value="c">
+</div><hr>
+
+<div class="question"><p><strong>Q2. Select the best description of the early (Apostolic) church.</strong></p>
+<label><input type="radio" name="q2" value="a"> They were not interested in doctrine.</label><br>
+<label><input type="radio" name="q2" value="b"> b) They only needed the Holy Spirit.</label><br>
+<label><input type="radio" name="q2" value="c"> c) They just wanted to follow Jesus.</label><br>
+<label><input type="radio" name="q2" value="d"> d) They thrived on the apostles’ teaching.</label><br>
+<label><input type="radio" name="q2" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q2_correct" value="d">
+</div><hr>
+
+<div class="question"><p><strong>Q3. What is the clearest sign of being Spirit filled?</strong></p>
+<label><input type="radio" name="q3" value="a"> a) An appetite for scripture.</label><br>
+<label><input type="radio" name="q3" value="b"> b) A love of church music.</label><br>
+<label><input type="radio" name="q3" value="c"> c) Regular attendance at church.</label><br>
+<label><input type="radio" name="q3" value="d"> d) Generous giving.</label><br>
+<label><input type="radio" name="q3" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q3_correct" value="a">
+</div><hr>
+
+<div class="question"><p><strong>Q4. How important is Christian fellowship?</strong></p>
+<label><input type="radio" name="q4" value="a"> a) Not at all important.</label><br>
+<label><input type="radio" name="q4" value="b"> b) Can be useful.</label><br>
+<label><input type="radio" name="q4" value="c"> c) Important.</label><br>
+<label><input type="radio" name="q4" value="d"> d) Very important.</label><br>
+<label><input type="radio" name="q4" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q4_correct" value="d">
+</div><hr>
+
+<div class="question"><p><strong>Q5. Which activity has no place in the public gatherings?</strong></p>
+<label><input type="radio" name="q5" value="a"> a) Dancing </label><br>
+<label><input type="radio" name="q5" value="b"> b) Singing
+</label><br>
+<label><input type="radio" name="q5" value="c"> c) Praying 
+</label><br>
+<label><input type="radio" name="q5" value="d"> d) Learning</label><br>
+<label><input type="radio" name="q5" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q5_correct" value="d">
+</div><hr>
+
+<div class="question"><p><strong>Q6. What motivated the Jerusalem congregation to share their property?</strong></p>
+<label><input type="radio" name="q6" value="a"> a) Communism.</label><br>
+<label><input type="radio" name="q6" value="b"> b) Socialism.</label><br>
+<label><input type="radio" name="q6" value="c"> c) Generosity.</label><br>
+<label><input type="radio" name="q6" value="d"> d) Totalitarianism.</label><br>
+<label><input type="radio" name="q6" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q6_correct" value="c">
+</div><hr>
+
+<div class="question"><p><strong>Q7. What relevance does the Jerusalem church have for the 21st century church?</strong></p>
+<label><input type="radio" name="q7" value="a"> a) No relevance given it is first century and culturally removed.</label><br>
+<label><input type="radio" name="q7" value="b"> b) It is a model for us to emulate.</label><br>
+<label><input type="radio" name="q7" value="c"> c) It teaches us to pool our wealth with other Christians.</label><br>
+<label><input type="radio" name="q7" value="d"> d) It teaches us that our meetings should be in private homes.</label><br>
+<label><input type="radio" name="q7" value="e"> e) None of the above.</label><br>
+<input type="hidden" name="q7_correct" value="d">
+</div><hr>
+<button type="button" onclick="scoreQuiz()">Score Quiz</button>
+
+<p id="scoreDisplay" style="font-weight:bold; font-size:1.2em;"></p>
+</form>
+
+<script>
+
+/*const sentence1 = document.getElementById("section1");
+const sentence2 = document.getElementById("section2");
+const sentence3 = document.getElementById("section3");
+const sentence4 = document.getElementById("section4");
+const sentence5 = document.getElementById("section5");
+const sentence6 = document.getElementById("section6");
+const sentence7 = document.getElementById("section7");
+const sentence8 = document.getElementById("section8");
+const sentence9 = document.getElementById("section9");
+const sentence10 = document.getElementById("section10"); */
+
+
+/*document.getElementById("button1").addEventListener("click", () => {
+sentence1.classList.add("highlight");
+});
+document.getElementById("button2").addEventListener("click", () => {
+removeHighlight();
+sentence2.classList.add("highlight");
+});
+document.getElementById("button3").addEventListener("click", () => {
+removeHighlight();
+sentence3.classList.add("highlight");
+});
+document.getElementById("button4").addEventListener("click", () => {
+removeHighlight();
+sentence4.classList.add("highlight");
+});
+document.getElementById("button5").addEventListener("click", () => {
+removeHighlight();
+sentence5.classList.add("highlight");
+});
+document.getElementById("button6").addEventListener("click", () => {
+removeHighlight();
+sentence6.classList.add("highlight");
+});
+document.getElementById("button7").addEventListener("click", () => {
+removeHighlight();
+sentence7.classList.add("highlight");
+});
+document.getElementById("button8").addEventListener("click", () => {
+removeHighlight();
+sentence8.classList.add("highlight");
+});
+document.getElementById("button9").addEventListener("click", () => {
+removeHighlight();
+sentence9.classList.add("highlight");
+});
+document.getElementById("button10").addEventListener("click", () => {
+removeHighlight();
+sentence10.classList.add("highlight");
+});*/
+
+
+/*function removeHighlight() {
+   sentence1.classList.remove("highlight");
+   sentence2.classList.remove("highlight");
+   sentence3.classList.remove("highlight");
+   sentence4.classList.remove("highlight");
+   sentence5.classList.remove("highlight");
+   sentence6.classList.remove("highlight");
+   sentence7.classList.remove("highlight");
+   sentence8.classList.remove("highlight");
+   sentence10.classList.remove("highlight");
+}*/
+
+
+function disableButtons() {
+  for (let i = 1; i <= 7; i++) {
+    const btn = document.getElementById(`button${i}`);
+    if (btn) btn.disabled = true;
+  }
+}
+
+function enableButtons() {
+  for (let i = 1; i <= 7; i++) {
+    const btn = document.getElementById(`button${i}`);
+    if (btn) btn.disabled = false;
+  }
+}
+
+disableButtons();
+
+function scoreQuiz() {
+    const form = document.getElementById('quizForm');
+    const qs = form.querySelectorAll('.question');
+    let total = qs.length;
+    let score = 0;
+
+    qs.forEach((div, i) => {
+        const q = i + 1;
+        const correct = form.querySelector(`input[name=q${q}_correct]`).value;
+        const chosen = form.querySelector(`input[name=q${q}]:checked`);
+        const labels = div.querySelectorAll('label');
+
+        labels.forEach(l => {
+            l.style.background = '';
+            l.style.padding = '3px';
+        });
+
+        labels.forEach(l => {
+            const val = l.querySelector('input').value;
+
+            if (val === correct) {
+                l.style.background = 'lightgreen';
+            }
+
+            if (chosen && val === chosen.value && val !== correct) {
+                l.style.background = 'lightcoral';
+            }
+        });
+
+        if (chosen && chosen.value === correct) {
+            score++;
+        }
+    }
+);
+
+document.getElementById('scoreDisplay').textContent =
+        `Score: ${score} / ${total}`;    
+}
+</script>
+
+</body>
+</html>
+
